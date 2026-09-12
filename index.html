@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>CIM Hub | Common Information Model</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        color: #222;
+        line-height: 1.6;
+    }
+
+    nav {
+        background: #1f2937;
+        color: white;
+        padding: 18px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        opacity: 0.7;
+    }
+
+    .hero {
+        background: #e8eef5;
+        padding: 100px 10%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        max-width: 700px;
+        margin: auto;
+        color: #555;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 25px;
+        background: #1f2937;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    section {
+        padding: 70px 10%;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .card h3 {
+        margin-bottom: 15px;
+    }
+
+    .architecture {
+        background: white;
+        text-align: center;
+    }
+
+    .diagram {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .box {
+        background: #e8eef5;
+        padding: 20px;
+        border-radius: 8px;
+        min-width: 150px;
+    }
+
+    .arrow {
+        font-size: 25px;
+    }
+
+    footer {
+        background: #1f2937;
+        color: white;
+        text-align: center;
+        padding: 30px;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<nav>
+    <div class="logo">CIM Hub</div>
+
+    <ul>
+        <li><a href="#about">About CIM</a></li>
+        <li><a href="#cgmes">CGMES</a></li>
+        <li><a href="#technology">Technology</a></li>
+    </ul>
+</nav>
+
+
+<div class="hero">
+    <h1>Common Information Model</h1>
+
+    <p>
+        Exploring CIM, CGMES and digital interoperability
+        for modern power systems.
+    </p>
+
+    <a href="#about" class="button">
+        Explore CIM
+    </a>
+</div>
+
+
+<section id="about">
+
+    <div class="section-title">
+        <h2>What is CIM?</h2>
+
+        <p>
+            A common language for exchanging power system information.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>⚡ Power Systems</h3>
+
+            <p>
+                CIM provides a standardized representation
+                of electrical networks, equipment and topology.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>🔄 Interoperability</h3>
+
+            <p>
+                Different software systems can exchange
+                power system data using a common model.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>📊 Data Exchange</h3>
+
+            <p>
+                CIM supports structured information exchange
+                between TSOs, vendors and grid applications.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="cgmes">
+
+    <div class="section-title">
+        <h2>CGMES</h2>
+
+        <p>Common Grid Model Exchange Standard</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Equipment</h3>
+
+            <p>
+                Transformers, lines, generators,
+                switches and other grid equipment.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>Steady State Hypothesis</h3>
+
+            <p>
+                Specific data subset containing operational input parameters needed to perform power flow and steady-state analysis on an electrical grid.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Topology</h3>
+
+            <p>
+                Connectivity nodes, terminals
+                and network topology.
+            </p>
+        </div>
+
+
+
+        <div class="card">
+            <h3>State Variables</h3>
+
+            <p>
+                Voltage, power flow and
+                operational state information.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="architecture" id="technology">
+
+    <div class="section-title">
+        <h2>CIM Data Architecture</h2>
+
+        <p>
+            From power system model to data exchange
+        </p>
+    </div>
+
+    <div class="diagram">
+
+        <div class="box">
+            Power System
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="box">
+            CIM Model
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="box">
+            CGMES
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="box">
+            Applications
+        </div>
+
+    </div>
+</section>
+
+
+<section>
+
+    <div class="section-title">
+        <h2>Latest Articles</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Introduction to CIM</h3>
+
+            <p>
+                Understanding the fundamentals
+                of the Common Information Model.
+            </p>
+
+            <br>
+
+            <a href="#">Read article →</a>
+        </div>
+
+
+        <div class="card">
+            <h3>CGMES Profiles Explained</h3>
+
+            <p>
+                Exploring EQ, SSH, TP and SV
+                profiles in CGMES.
+            </p>
+
+            <br>
+
+            <a href="#">Read article →</a>
+        </div>
+
+
+        <div class="card">
+            <h3>SHACL Validation</h3>
+
+            <p>
+                Using SHACL to validate
+                power system data models.
+            </p>
+
+            <br>
+
+            <a href="#">Read article →</a>
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+    <p>© 2026 CIM Hub | Common Information Model</p>
+
+    <p>
+        Power Systems • CIM • CGMES • Interoperability
+    </p>
+</footer>
+```
+
+</body>
+</html>
