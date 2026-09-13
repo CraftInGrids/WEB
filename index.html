@@ -1,375 +1,818 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>CIM Hub | Common Information Model</title>
+    <title>CraftInGrids | Power Systems & Digital Innovation</title>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
 
-    body {
-        font-family: Arial, sans-serif;
-        background: #f5f7fa;
-        color: #222;
-        line-height: 1.6;
-    }
+        /* =========================
+           GENERAL
+        ========================= */
 
-    nav {
-        background: #1f2937;
-        color: white;
-        padding: 18px 10%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    nav ul {
-        display: flex;
-        list-style: none;
-        gap: 25px;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-    }
 
-    nav a:hover {
-        opacity: 0.7;
-    }
+        /* =========================
+           NAVIGATION
+        ========================= */
 
-    .hero {
-        background: #e8eef5;
-        padding: 100px 10%;
-        text-align: center;
-    }
+        nav {
+            background: #1f2937;
+            color: white;
+            padding: 18px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .hero h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-    .hero p {
-        font-size: 20px;
-        max-width: 700px;
-        margin: auto;
-        color: #555;
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
 
-    .button {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 12px 25px;
-        background: #1f2937;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
 
-    section {
-        padding: 70px 10%;
-    }
+        nav a:hover {
+            opacity: 0.7;
+        }
 
-    .section-title {
-        text-align: center;
-        margin-bottom: 40px;
-    }
 
-    .section-title h2 {
-        font-size: 32px;
-    }
+        /* =========================
+           HERO
+        ========================= */
 
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-    }
+        .hero {
+            background: #e8eef5;
+            padding: 120px 10%;
+            text-align: center;
+        }
 
-    .card {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        border: 1px solid #ddd;
-    }
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
 
-    .card h3 {
-        margin-bottom: 15px;
-    }
+        .hero p {
+            font-size: 21px;
+            max-width: 850px;
+            margin: auto;
+            color: #555;
+        }
 
-    .architecture {
-        background: white;
-        text-align: center;
-    }
+        .subtitle {
+            margin-top: 20px !important;
+            font-size: 16px !important;
+            font-weight: bold;
+            color: #444 !important;
+        }
 
-    .diagram {
-        margin-top: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: #1f2937;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
 
-    .box {
-        background: #e8eef5;
-        padding: 20px;
-        border-radius: 8px;
-        min-width: 150px;
-    }
+        .button:hover {
+            opacity: 0.8;
+        }
 
-    .arrow {
-        font-size: 25px;
-    }
 
-    footer {
-        background: #1f2937;
-        color: white;
-        text-align: center;
-        padding: 30px;
-    }
-</style>
-```
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           FOCUS AREAS
+        ========================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        #about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .about-content h3 {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            padding: 12px 0;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+        }
+
+
+        /* =========================
+           DIGITAL INNOVATION
+        ========================= */
+
+        .innovation {
+            background: #e8eef5;
+        }
+
+        .innovation-container {
+            max-width: 1300px;
+            margin: auto;
+            text-align: center;
+        }
+
+
+        /* RESEARCH */
+
+        .research-box {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .research-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .research-box p {
+            color: #555;
+        }
+
+
+        /* ECOSYSTEM */
+
+        .ecosystem {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .eco-box {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .eco-box h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .eco-box p {
+            color: #555;
+            font-size: 15px;
+        }
+
+
+        /* DATA QUALITY WIDER */
+
+        .data-quality {
+            min-width: 280px;
+        }
+
+
+        /* TOOLS */
+
+        .tools-box {
+            background: white;
+            max-width: 650px;
+            margin: 50px auto;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .tools-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .tools-box p {
+            color: #555;
+        }
+
+
+        /* ARROW */
+
+        .down-arrow {
+            font-size: 35px;
+            margin: 20px 0;
+        }
+
+
+        /* SOLUTIONS */
+
+        .solutions-box {
+            background: #1f2937;
+            color: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .solutions-box h3 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .solutions-box p {
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        #contact {
+            text-align: center;
+            background: white;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 40px 10%;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .ecosystem {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero {
+                padding: 80px 10%;
+            }
+
+            section {
+                padding: 60px 8%;
+            }
+
+            .ecosystem {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-```
-<nav>
-    <div class="logo">CIM Hub</div>
 
-    <ul>
-        <li><a href="#about">About CIM</a></li>
-        <li><a href="#cgmes">CGMES</a></li>
-        <li><a href="#technology">Technology</a></li>
-    </ul>
-</nav>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
+    <nav>
 
-<div class="hero">
-    <h1>Common Information Model</h1>
+        <div class="logo">
+            CraftInGrids
+        </div>
 
-    <p>
-        Exploring CIM, CGMES and digital interoperability
-        for modern power systems.
-    </p>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Focus Areas</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#innovation">Innovation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-    <a href="#about" class="button">
-        Explore CIM
-    </a>
-</div>
+    </nav>
 
 
-<section id="about">
+    <!-- =========================
+         HOME
+    ========================== -->
 
-    <div class="section-title">
-        <h2>What is CIM?</h2>
+    <section class="hero" id="home">
+
+        <h1>CraftInGrids</h1>
 
         <p>
-            A common language for exchanging power system information.
+            Engineering the future of power systems through
+            interoperability, data and digital technologies.
         </p>
-    </div>
 
-    <div class="cards">
+        <p class="subtitle">
+            Power Systems • CIM • CGMES • Data Quality • Digital Innovation
+        </p>
 
-        <div class="card">
-            <h3>⚡ Power Systems</h3>
+        <a href="#services" class="button">
+            Explore Focus Areas
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOCUS AREAS
+    ========================== -->
+
+    <section id="services">
+
+        <div class="section-title">
+
+            <h2>Focus Areas</h2>
 
             <p>
-                CIM provides a standardized representation
-                of electrical networks, equipment and topology.
+                Connecting power systems, standards, data and digital technologies
             </p>
+
         </div>
 
 
-        <div class="card">
-            <h3>🔄 Interoperability</h3>
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>⚡ Power Systems</h3>
+
+                <p>
+                    Power system modelling, network analysis,
+                    load flow, contingency analysis, operational
+                    planning and grid studies, including emerging
+                    applications of AI, optimization and future
+                    grid technologies.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🔗 CIM & CGMES</h3>
+
+                <p>
+                    Exploring the Common Information Model (CIM),
+                    CGMES, information modelling, application profiles
+                    and power system data exchange standards.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🔍 Data Quality & Interoperability</h3>
+
+                <p>
+                    Improving the quality, consistency and interoperability
+                    of power system data through validation, RDF, SHACL,
+                    quality rules and information modelling.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>💡 Education, Research & Innovation</h3>
+
+                <p>
+                    Technical education, knowledge sharing, research,
+                    innovation, emerging technologies and new approaches
+                    for the future of power systems.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🛠 Tools & Automation</h3>
+
+                <p>
+                    Digital tools, automation, data processing,
+                    validation tools, software integration and
+                    efficient engineering workflows.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📊 Project Management & Business Analysis</h3>
+
+                <p>
+                    Requirements analysis, stakeholder coordination,
+                    use cases, process analysis, project planning
+                    and technical project delivery.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>About CraftInGrids</h2>
 
             <p>
-                Different software systems can exchange
-                power system data using a common model.
+                Power systems, technology and innovation
             </p>
+
         </div>
 
 
-        <div class="card">
-            <h3>📊 Data Exchange</h3>
+        <div class="about-content">
 
-            <p>
-                CIM supports structured information exchange
-                between TSOs, vendors and grid applications.
-            </p>
+            <h3>
+                CraftInGrids brings together power system engineering,
+                digital technologies and innovation.
+            </h3>
+
+            <ul class="about-list">
+
+                <li>
+                    ⚡ Nearly <strong>10 years of experience</strong>
+                    in power systems and engineering
+                </li>
+
+                <li>
+                    🔗 Expertise in <strong>CIM & CGMES</strong>,
+                    data quality and interoperability
+                </li>
+
+                <li>
+                    💻 Turning <strong>standards and ideas into practical
+                    implementations through open-source tools and projects</strong>
+                </li>
+
+                <li>
+                    📚 <strong>Education and knowledge sharing</strong>
+                    for the power system community
+                </li>
+
+                <li>
+                    💡 <strong>Research and innovation</strong>
+                    for the future digital grid
+                </li>
+
+            </ul>
+
         </div>
 
-    </div>
-</section>
+    </section>
 
 
-<section id="cgmes">
+    <!-- =========================
+         FROM ENGINEERING TO DIGITAL INNOVATION
+    ========================== -->
 
-    <div class="section-title">
-        <h2>CGMES</h2>
+    <section class="innovation" id="innovation">
 
-        <p>Common Grid Model Exchange Standard</p>
-    </div>
+        <div class="section-title">
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>Equipment</h3>
+            <h2>From Engineering to Digital Innovation</h2>
 
             <p>
-                Transformers, lines, generators,
-                switches and other grid equipment.
+                Connecting engineering, standards, data and technology
+                to create practical solutions.
             </p>
+
         </div>
 
 
-        <div class="card">
-            <h3>Steady State Hypothesis</h3>
+        <div class="innovation-container">
 
-            <p>
-                Specific data subset containing operational input parameters needed to perform power flow and steady-state analysis on an electrical grid.
-            </p>
+
+            <!-- RESEARCH & INNOVATION -->
+
+            <div class="research-box">
+
+                <h3>💡 Research & Innovation</h3>
+
+                <p>
+                    Research • Emerging Technologies • Innovation
+                </p>
+
+            </div>
+
+
+            <!-- MAIN ECOSYSTEM -->
+
+            <div class="ecosystem">
+
+
+                <!-- POWER SYSTEMS -->
+
+                <div class="eco-box">
+
+                    <h3>⚡ Power Systems</h3>
+
+                    <p>
+                        Engineering<br>
+                        Studies<br>
+                        Planning
+                    </p>
+
+                </div>
+
+
+                <!-- CIM & CGMES -->
+
+                <div class="eco-box">
+
+                    <h3>🔗 CIM & CGMES</h3>
+
+                    <p>
+                        Information Models<br>
+                        Profiles<br>
+                        Data Exchange
+                    </p>
+
+                </div>
+
+
+                <!-- DATA QUALITY -->
+
+                <div class="eco-box data-quality">
+
+                    <h3>
+                        🔍 Data Quality &
+                        Interoperability
+                    </h3>
+
+                    <p>
+                        RDF • SHACL<br>
+                        Validation<br>
+                        Data Exchange<br>
+                        Standards & Integration
+                    </p>
+
+                </div>
+
+
+                <!-- EDUCATION -->
+
+                <div class="eco-box">
+
+                    <h3>📚 Education</h3>
+
+                    <p>
+                        Knowledge Sharing<br>
+                        Learning<br>
+                        Training
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- TOOLS -->
+
+            <div class="tools-box">
+
+                <h3>🛠 Tools & Automation</h3>
+
+                <p>
+                    Open Source • Automation • Digital Tools
+                </p>
+
+            </div>
+
+
+            <!-- ARROW -->
+
+            <div class="down-arrow">
+                ↓
+            </div>
+
+
+            <!-- SOLUTIONS -->
+
+            <div class="solutions-box">
+
+                <h3>🎯 Solutions</h3>
+
+                <p>
+                    Practical • Digital • Interoperable
+                </p>
+
+            </div>
+
+
         </div>
 
-        <div class="card">
-            <h3>Topology</h3>
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <div class="section-title">
+
+            <h2>Contact</h2>
 
             <p>
-                Connectivity nodes, terminals
-                and network topology.
+                Let's connect around power systems and digital innovation
             </p>
+
         </div>
 
 
-
-        <div class="card">
-            <h3>State Variables</h3>
+        <div class="contact-content">
 
             <p>
-                Voltage, power flow and
-                operational state information.
+                CraftInGrids is an independent technical platform
+                exploring power systems, CIM, CGMES, interoperability,
+                data quality and digital technologies.
             </p>
+
+            <a href="mailto:your-email@example.com"
+               class="button">
+
+                Get in Touch
+
+            </a>
+
         </div>
 
-    </div>
-</section>
+    </section>
 
 
-<section class="architecture" id="technology">
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-    <div class="section-title">
-        <h2>CIM Data Architecture</h2>
+    <footer>
+
+        <h3>CraftInGrids</h3>
 
         <p>
-            From power system model to data exchange
+            Engineering the future of power systems
         </p>
-    </div>
 
-    <div class="diagram">
+        <br>
 
-        <div class="box">
-            Power System
-        </div>
+        <p>
+            Power Systems • Standards • Data • Digital Innovation
+        </p>
 
-        <div class="arrow">→</div>
+        <br>
 
-        <div class="box">
-            CIM Model
-        </div>
+        <p>
+            © 2026 CraftInGrids
+        </p>
 
-        <div class="arrow">→</div>
+    </footer>
 
-        <div class="box">
-            CGMES
-        </div>
-
-        <div class="arrow">→</div>
-
-        <div class="box">
-            Applications
-        </div>
-
-    </div>
-</section>
-
-
-<section>
-
-    <div class="section-title">
-        <h2>Latest Articles</h2>
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Introduction to CIM</h3>
-
-            <p>
-                Understanding the fundamentals
-                of the Common Information Model.
-            </p>
-
-            <br>
-
-            <a href="#">Read article →</a>
-        </div>
-
-
-        <div class="card">
-            <h3>CGMES Profiles Explained</h3>
-
-            <p>
-                Exploring EQ, SSH, TP and SV
-                profiles in CGMES.
-            </p>
-
-            <br>
-
-            <a href="#">Read article →</a>
-        </div>
-
-
-        <div class="card">
-            <h3>SHACL Validation</h3>
-
-            <p>
-                Using SHACL to validate
-                power system data models.
-            </p>
-
-            <br>
-
-            <a href="#">Read article →</a>
-        </div>
-
-    </div>
-</section>
-
-
-<footer>
-    <p>© 2026 CIM Hub | Common Information Model</p>
-
-    <p>
-        Power Systems • CIM • CGMES • Interoperability
-    </p>
-</footer>
-```
 
 </body>
+
 </html>
